@@ -26,7 +26,7 @@
           <a class="navbar-brand" href="#">Navbar</a>
           <div class="collapse navbar-collapse">
               <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                  <li class="nav-item">
+                  <li class="nav-item ">
                       <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
@@ -46,6 +46,73 @@
       </nav>
       <!-- End NavBar -->
 
+      <div class="container">
+        <h1 class="mb-2">Loan Calculator</h1>
+        <div class="row">
+            <div class="col loanform">
+                <div class="form-group">
+                    <label for="loanAmount">Loan Amount:</label>
+                    <input class="form-control" type="number" placeholder = "Enter Amount" id="loanAmount">
+                </div>
+                <div class="form-group">
+                    <label for="loanTerm">Payments:</label>
+                    <input class="form-control" type="number" placeholder = "Enter Months" id="loanTerm">
+                </div>
+                <div class="form-group">
+                    <label for="loanRate">Rate:</label>
+                    <input class="form-control" type="number" placeholder = "Interest" id="loanRate">
+                </div>
+                <div class="form-group">
+                    <button id="Submit" type="submit" class="btn btn-primary float-right">Calculate</button>
+                </div>
+            </div>
+            <div class="col loanInfo">
+                <div id="paymentTitle">
+                    <p>Your Monthly Payments</p>
+                </div>
+                <h1 class="text-center" id="payment"></h1>
+                <div class="row">
+                    <div class="col">
+                        <label class="text-left">Total Principcal:</label>
+                    </div>
+                    <div class="col text-right" id="totalPrincipal"></div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="text-left">Total Interest:</label>
+                    </div>
+                    <div class="col text-right" id="totalInterest"></div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="text-left">Total Cost:</label>
+                    </div>
+                    <div class="col text-right" id="totalCost"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col">
+                <table id="ResultsTable" class="table table-striped table-hover">
+                    <thead id="tableheader" class="bg-dark text-white">
+                        <tr>
+                            <th>Month</th>
+                            <th>Payment</th>
+                            <th>Principal</th>
+                            <th>Interest</th>
+                            <th>Total Interest</th>
+                            <th>Balance</th>
+                        </tr>
+                    </thead>
+                    <tbody id="TableOutput">
+                        <!--Payments Template Data will go here-->
+                        <!--<tr><td>...-->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+      
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
